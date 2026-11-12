@@ -52,7 +52,7 @@ export function Header() {
             href={SITE.whatsapp}
             variante={desplazado ? "contornoOscuro" : "contorno"}
           >
-            Hacer pedido
+            ¡Haz tu pedido!
           </Boton>
         </div>
         <button
