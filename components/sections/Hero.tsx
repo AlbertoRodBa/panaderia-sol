@@ -16,7 +16,7 @@ export function Hero() {
       <Foto
         src="/images/panaderia-heroimg.jpg"
         alt="Variedad de panes recién horneados en la vitrina de la panadería"
-        proporcion="aspect-[4/5]"
+        proporcion="aspect-[6/5]"
         sizes="(min-width: 768px) 50vw, 100vw"
         priority
         className="rounded-[2rem] hero-fade-in hero-fade-in-delayed"
