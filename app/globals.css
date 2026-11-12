@@ -12,7 +12,7 @@
   --font-sans: var(--font-dm-sans), system-ui, sans-serif;
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 body { background: var(--color-harina); color: var(--color-espresso); font-family: var(--font-sans); }
 
 :focus-visible { outline: 2px solid var(--color-corteza-oscuro); outline-offset: 3px; }
@@ -26,6 +26,47 @@ body { background: var(--color-harina); color: var(--color-espresso); font-famil
 .carousel-scroll::-webkit-scrollbar { height: 3px; }
 .carousel-scroll::-webkit-scrollbar-thumb { background: var(--color-tostado); border-radius: 9999px; }
 .carousel-scroll::-webkit-scrollbar-track { background: transparent; }
+
+.announcement-bar {
+  overflow: hidden;
+}
+
+.announcement-track {
+  display: flex;
+  width: max-content;
+  animation: announcement-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.announcement-group {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 1.5rem;
+  white-space: nowrap;
+}
+
+.announcement-group a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 180ms ease;
+}
+
+.announcement-group a:hover,
+.announcement-group a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.announcement-bar:hover .announcement-track,
+.announcement-bar:focus-within .announcement-track {
+  animation-play-state: paused;
+}
+
+@keyframes announcement-scroll {
+  to { transform: translate3d(-33.333333%, 0, 0); }
+}
 
 @keyframes hero-fade-in {
   from { opacity: 0; transform: translateY(8px); }
@@ -43,5 +84,23 @@ body { background: var(--color-harina); color: var(--color-espresso); font-famil
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .carousel-scroll { scroll-behavior: auto; }
+  .announcement-track {
+    width: 100%;
+    justify-content: center;
+    animation: none;
+  }
+  .announcement-group {
+    display: none;
+  }
+  .announcement-group:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    padding-inline: 1rem;
+    margin-right: 0;
+    text-align: center;
+    white-space: normal;
+  }
   * { animation: none !important; transition: none !important; }
 }

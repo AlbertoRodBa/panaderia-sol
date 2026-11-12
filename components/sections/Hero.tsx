@@ -6,7 +6,7 @@ export function Hero() {
     <section id="inicio" className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
       <div className="hero-fade-in">
         <h1 className="font-serif text-4xl leading-tight md:text-6xl">
-          Pan de verdad y pastelería de horno, hechos cada mañana.
+          Pan de tradición y pastelería de horno, hechos cada mañana.
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-cacao">
           Marraquetas, hallullas y pan de masa madre, horneados dos veces al día. También realizamos encargos por WhatsApp.

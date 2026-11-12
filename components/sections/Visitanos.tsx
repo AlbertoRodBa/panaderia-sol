@@ -8,7 +8,7 @@ export function Visitanos() {
     <section id="visitanos" className="bg-avena py-24">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-3">
         <div>
-          <h2 className="font-serif text-3xl">Pan caliente</h2>
+          <h2 className="font-serif text-3xl">Sabor de la casa</h2>
           <p className="mt-4 font-serif text-4xl text-corteza-oscuro">{SITE.panCaliente.join(" y ")}</p>
           <p className="mt-2 text-sm text-cacao">Todos los días.</p>
         </div>

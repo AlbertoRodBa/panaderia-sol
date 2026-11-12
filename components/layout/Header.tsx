@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { Boton } from "@/components/ui/Boton";
+import { ANUNCIOS } from "@/data/anuncios";
 import { SITE } from "@/lib/site";
 
 const ENLACES = [
-  { href: "#inicio", texto: "Inicio" },
-  { href: "#vitrina", texto: "Productos" },
-  { href: "#visitanos", texto: "Ubicación y horarios" },
+  { href: "/#inicio", texto: "Inicio" },
+  { href: "/#vitrina", texto: "Productos" },
+  { href: "/#visitanos", texto: "Ubicación y horarios" },
+  { href: "/contacto", texto: "Contacto" },
 ];
 
 export function Header() {
@@ -34,8 +36,31 @@ export function Header() {
           : "border-tostado/30 bg-harina/90 text-espresso"
       }`}
     >
+      <div className="announcement-bar bg-[#3F3D3B] py-2 text-sm text-harina">
+        <div className="announcement-track" aria-hidden="true">
+          {[0, 1, 2].map((copia) => (
+            <div className="announcement-group" key={copia}>
+              {ANUNCIOS.map((anuncio) =>
+                anuncio.enlace ? (
+                  <a key={anuncio.texto} href={anuncio.enlace}>{anuncio.texto}</a>
+                ) : (
+                  <span key={anuncio.texto}>{anuncio.texto}</span>
+                ),
+              )}
+            </div>
+          ))}
+        </div>
+        <p className="sr-only">
+          {ANUNCIOS.map((anuncio, indice) => (
+            <span key={anuncio.texto}>
+              {indice > 0 ? " " : ""}
+              {anuncio.enlace ? <a href={anuncio.enlace}>{anuncio.texto}</a> : anuncio.texto}.
+            </span>
+          ))}
+        </p>
+      </div>
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6" aria-label="Principal">
-        <a href="#" onClick={cerrarMenu} className="font-serif text-xl font-semibold">{SITE.nombre}</a>
+        <a href="/" onClick={cerrarMenu} className="font-serif text-xl font-semibold">{SITE.nombre}</a>
         <ul className={`hidden gap-8 text-sm md:flex ${desplazado ? "text-white/90" : "text-cacao"}`}>
           {ENLACES.map((e) => (
             <li key={e.texto}>
