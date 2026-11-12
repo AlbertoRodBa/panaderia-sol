@@ -5,6 +5,7 @@ import { Boton } from "@/components/ui/Boton";
 import { SITE } from "@/lib/site";
 
 const ENLACES = [
+  { href: "#inicio", texto: "Inicio" },
   { href: "#vitrina", texto: "Productos" },
   { href: "#visitanos", texto: "Ubicación y horarios" },
 ];

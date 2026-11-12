@@ -3,7 +3,7 @@ import { Foto } from "@/components/ui/Foto";
 
 export function Hero() {
   return (
-    <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
+    <section id="inicio" className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
       <div className="hero-fade-in">
         <h1 className="font-serif text-4xl leading-tight md:text-6xl">
           Pan de verdad y pastelería de horno, hechos cada mañana.
