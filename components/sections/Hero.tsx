@@ -6,10 +6,10 @@ export function Hero() {
     <section id="inicio" className="mx-auto grid max-w-6xl items-center gap-8 px-6 py-12 md:grid-cols-2 md:gap-12 md:py-28">
       <div className="order-2 hero-fade-in md:order-1">
         <h1 className="font-serif text-4xl leading-tight md:text-6xl">
-          Pan de tradición y pastelería de horno, hechos cada mañana.
+          Pan y pastelería de tradición hechos con dedicación.
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-cacao">
-          Marraquetas, hallullas y pan de masa madre, horneados dos veces al día. También realizamos encargos por WhatsApp.
+          Disfruta de una variedad de productos para acompañar tus días en casa. También realizamos encargos por WhatsApp.
         </p>
         <Boton href="#vitrina" className="mt-10">Ver vitrina de hoy</Boton>
       </div>
