@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Boton } from "@/components/ui/Boton";
 import { ANUNCIOS } from "@/data/anuncios";
 import { SITE } from "@/lib/site";
@@ -60,7 +61,10 @@ export function Header() {
         </p>
       </div>
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6" aria-label="Principal">
-        <a href="/" onClick={cerrarMenu} className="font-serif text-xl font-semibold">{SITE.nombre}</a>
+        <a href="/" onClick={cerrarMenu} className="flex items-center gap-2 font-serif text-xl font-semibold">
+          <Image src="/images/logo-1.webp" alt="" width={44} height={44} priority />
+          <span>{SITE.nombre}</span>
+        </a>
         <ul className={`hidden gap-8 text-sm md:flex ${desplazado ? "text-white/90" : "text-cacao"}`}>
           {ENLACES.map((e) => (
             <li key={e.texto}>

@@ -10,6 +10,9 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 export const metadata: Metadata = {
   title: `${SITE.nombre} | Pan y pastelería de horno`,
   description: `Marraquetas, masa madre y pastelería hechas cada mañana. Pan caliente a las ${SITE.panCaliente.join(" y ")} hrs.`,
+  icons: {
+    icon: "/images/favicon-1.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
