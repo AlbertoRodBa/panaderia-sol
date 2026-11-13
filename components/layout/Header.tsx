@@ -61,9 +61,16 @@ export function Header() {
         </p>
       </div>
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6" aria-label="Principal">
-        <a href="/" onClick={cerrarMenu} className="flex items-center gap-2 font-serif text-xl font-semibold">
+        <a href="/" onClick={cerrarMenu} className="flex items-center gap-2">
           <Image src="/images/logo-1.webp" alt="" width={44} height={44} priority />
-          <span>{SITE.nombre}</span>
+          <span className="flex flex-col">
+            <span className="font-serif text-lg font-semibold leading-tight">{SITE.nombre}</span>
+            <span className={`mt-0.5 font-sans text-[9px] font-medium uppercase tracking-[0.2em] ${
+              desplazado ? "text-white/75" : "text-cacao"
+            }`}>
+              Sabor artesanal
+            </span>
+          </span>
         </a>
         <ul className={`hidden gap-8 text-sm md:flex ${desplazado ? "text-white/90" : "text-cacao"}`}>
           {ENLACES.map((e) => (
