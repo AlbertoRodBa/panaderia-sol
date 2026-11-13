@@ -9,4 +9,5 @@ export const PRODUCTOS: Producto[] = [
   { nombre: "Pan amasado", imagen: "/images/pan-amasado.jpg" },
   { nombre: "Queque de zanahoria", imagen: "/images/queque-zanahoria.jpg" },
   { nombre: "Berlín", imagen: "/images/berlin.jpg" },
+  { nombre: "Empolvado", imagen: "/images/empolvado.webp" },
 ];
