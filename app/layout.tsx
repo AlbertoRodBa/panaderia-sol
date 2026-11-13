@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
+import { BotonWhatsappFlotante } from "@/components/layout/BotonWhatsappFlotante";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -14,7 +15,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es-CL" className={`${fraunces.variable} ${dmSans.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <BotonWhatsappFlotante />
+      </body>
     </html>
   );
 }
